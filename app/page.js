@@ -33,7 +33,7 @@ export default function Component() {
       <header className="bg-zinc-900 px-4 lg:px-6 h-16 flex items-center">
       <Link href="/" className="flex items-center justify-center">
   <Image
-    src="/inioke.png" // Ganti dengan path logo yang sesuai
+    src="/Logo.png" // Ganti dengan path logo yang sesuai
     alt="Job Dot IT Logo"
     width={50} // Sesuaikan lebar sesuai kebutuhan
     height={50} // Sesuaikan tinggi sesuai kebutuhan
