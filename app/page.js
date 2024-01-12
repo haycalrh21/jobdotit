@@ -47,9 +47,7 @@ export default function Component() {
           <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
             Portfolio
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-            Contact
-          </Link>
+
         </nav>
       </header>
       <main className="flex-2">
@@ -112,6 +110,33 @@ export default function Component() {
           </div>
         </div>
       </section>
+      <section id="teams" className="bg-zinc-900 py-20">
+  <div className="container mx-auto">
+    <h2 className="text-3xl font-semibold text-center text-white mb-4">Our Team</h2>
+    <div className="flex flex-wrap -m-4">
+      {teamMembers.map((member, index) => (
+        <div key={index} className="p-4 md:w-1/2 lg:w-1/3">
+          <div className="h-full overflow-hidden">
+            <Image
+              src={member.imageSrc}
+              alt={member.name}
+              layout="responsive"
+              width={500}
+              height={600}
+            />
+            <div className="p-6">
+              <h2 className="text-xl font-medium text-white mb-1">{member.name}</h2>
+              <p className="leading-relaxed mb-5">{member.role}</p>
+              <div className="flex items-center flex-wrap">
+                {/* ... additional content */}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-gray-500 dark:text-gray-400">© Job Dot IT Inc. All rights reserved.</p>
@@ -146,6 +171,24 @@ function MountainIcon(props) {
     </svg>
   );
 }
+
+const teamMembers = [
+  {
+    name: "Habibi Rahman",
+    
+    imageSrc: "/habibi.jpg", // Ganti dengan path foto yang sesuai
+  },
+  {
+    name: "Bhazy Ghazalah Acyuta",
+    
+    imageSrc: "/baji.png", // Ganti dengan path foto yang sesuai
+  },
+  {
+    name: "Haycal Rayhansyah",
+   
+    imageSrc: "/haycal.png", // Ganti dengan path foto yang sesuai
+  },
+];
 
 const serviceItems = [
   {
